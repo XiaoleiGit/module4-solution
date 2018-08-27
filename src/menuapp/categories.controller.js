@@ -8,11 +8,13 @@ angular.module('MenuApp')
 CategoryController.$inject = ['MenuDataService']
 function CategoryController(MenuDataService) {
   var categories = this;
+  console.log("hellollo");
 
   categories.promise = MenuDataService.getAllCategorie();
 
-  promise.then(function(response) {
+  categories.promise.then(function(response) {
     categories.fullList = response.data;
+    console.log(categories.fullList);
   })
   .catch(function(error) {
       console.log(error);

@@ -21,7 +21,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 
   .state('category', {
     url: '/category',
-    templateUrl: 'src/menuapp/templates/categories.template.html'
+    templateUrl: 'src/menuapp/templates/categories.template.html',
     controller: 'CategoryController as cactrl',
     resolve: {
       categories: ['MenuDataService', function(MenuDataService) {
