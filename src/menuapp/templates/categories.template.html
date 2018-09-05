@@ -2,7 +2,7 @@
 
 <div>
   <ul>
-    <li ng-repeat="item in cactrl.categories_list" ng-click="cactrl.saveSelectValue($index)" ui-sref="items({itemId: cactrl.selectedShortName})">
+    <li ng-repeat="item in cactrl.categories_list" ui-sref="items({itemId: item.short_name})">
       <span class="text">Short name: </span>{{item.short_name}},
       <span class="text">Name: </span>{{item.name}},
       <span class="text" ng-if=(item.special_instructions!=="")>Special instructions: </span>{{item.special_instructions}}
