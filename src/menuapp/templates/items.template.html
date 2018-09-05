@@ -1,3 +1,12 @@
 <div>
-  This is the item html.
+  <a ui-sref="home">Home</a> &lt; <a ui-sref="category">Category</a> &lt; <span>Items</span>
+  <ul>
+    <li ng-repeat="item in itemsctrl.menuItems">
+      <span class="text">Short name: </span>{{item.short_name}},
+      <span class="text">Name: </span>{{item.name}},
+      <span class="text">Description: </span>{{item.description}},
+      <span class="text" ng-if="item.price_small !== null">Price small: </span>{{item.price_small}},
+      <span class="text" ng-if="item.price_large !== null">Price large: </span>{{item.price_large}}
+    </li>
+  </ul>
 </div>
